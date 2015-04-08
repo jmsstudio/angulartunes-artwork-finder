@@ -1,0 +1,24 @@
+{
+  "name": "angulartunes-artwork-finder",
+  "version": "0.0.1",
+  "homepage": "https://github.com/marcio/angulartunes-artwork-finder",
+  "authors": [
+    "Marcio Gasparotto <mgasparotto@gmail.com>"
+  ],
+  "description": "AngularJS iTunes Artwork Finder",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15",
+    "angular-resource": "~1.3.15",
+    "angular-sanitize": "~1.3.15",
+    "angular-ui-router": "~0.2.13",
+    "lodash": "~3.6.0"
+  }
+}
