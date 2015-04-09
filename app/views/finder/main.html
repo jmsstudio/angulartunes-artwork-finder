@@ -1,17 +1,35 @@
+<header class="ui page grid topo">
+    <div class="row">
+        <div class="column">
+            <h2 class="ui header">
+                <i class="search icon"></i>
+                <div class="content">
+                    AngularJS iTunes Artwork Finder
+                    <p class="sub header">
+                        <i class="code icon"></i> with <i class="heart icon"></i> by <a href="https://github.com/marcio/angulartunes-artwork-finder"><b>Crazy Front</b></a>
+                    </p>
+                </div>
+            </h2>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+</header>
 
-    <h1>Bem vindo, {{vm.nome}}</h1>
+<div id="app" class="ui page grid"></div>
 
-    <form>
-        <label for="texto">Texto</label>
-        <input id="texto" type="text" name="texto" ng-model="vm.textoDigitado">
-        <button ng-click="vm.adicionaTexto()">Adicionar</button>
-        <button ng-click="vm.limparLogs()">Limpar</button>
-    </form>
+<h1>Bem vindo, {{vm.nome}}</h1>
 
-    <ul>
-        <li ng-repeat="texto in vm.logs track by $index"> <a ng-click="vm.removerItem($index)"> &times; </a>
-            <span ng-class="{duplicatedText : vm.indicePintado === $index}">
-                {{texto}}
-            </span>
-        </li>
-    </ul>
+<form>
+    <label for="texto">Texto</label>
+    <input id="texto" type="text" name="texto" ng-model="vm.textoDigitado">
+    <button ng-click="vm.adicionaTexto()">Adicionar</button>
+    <button ng-click="vm.limparLogs()">Limpar</button>
+</form>
+
+<ul>
+    <li ng-repeat="texto in vm.logs track by $index"><a ng-click="vm.removerItem($index)"> &times; </a>
+                    <span ng-class="{duplicatedText : vm.indicePintado === $index}">
+                        {{texto}}
+                    </span>
+    </li>
+</ul>
