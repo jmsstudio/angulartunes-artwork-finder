@@ -27,7 +27,8 @@ module.exports = function(grunt) {
     //teste
     grunt.registerTask('default', [
         'clean',
-        'concat:vendor'
+        'concat',
+        'sass'
     ]);
 
 };

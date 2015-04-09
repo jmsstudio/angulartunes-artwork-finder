@@ -1,1 +1,17 @@
-<h1>{{nome}}</h1>
+
+    <h1>Bem vindo, {{vm.nome}}</h1>
+
+    <form>
+        <label for="texto">Texto</label>
+        <input id="texto" type="text" name="texto" ng-model="vm.textoDigitado">
+        <button ng-click="vm.adicionaTexto()">Adicionar</button>
+        <button ng-click="vm.limparLogs()">Limpar</button>
+    </form>
+
+    <ul>
+        <li ng-repeat="texto in vm.logs track by $index"> <a ng-click="vm.removerItem($index)"> &times; </a>
+            <span ng-class="{duplicatedText : vm.indicePintado === $index}">
+                {{texto}}
+            </span>
+        </li>
+    </ul>

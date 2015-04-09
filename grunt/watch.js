@@ -9,5 +9,9 @@ module.exports = {
     gruntfile: {
         files: ['Gruntfile.js', 'grunt/*.js'],
         tasks: ['default']
+    },
+    sass: {
+        files: ['<%= config.css %>/**/*.scss'],
+        tasks: ['sass']
     }
 };

@@ -15,6 +15,7 @@ function FinderConfig($stateProvider, $urlRouterProvider, $locationProvider){
         .state('finder', {
             url: '/',
             templateUrl: '/app/views/finder/main.html',
-            controller: 'FinderController'
+            controller: 'FinderController',
+            controllerAs: 'vm'
         });
 }

@@ -3,6 +3,6 @@
  */
 module.exports = {
     dist: {
-        src: ['<%= config.dist %>']
+        src: ['<%= config.dist %>/js']
     }
 };
