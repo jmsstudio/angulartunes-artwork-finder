@@ -11,5 +11,15 @@ module.exports = {
             '<%= config.vendor %>/lodash/lodash.js'
         ],
         dest: '<%= config.dist %>/js/vendors.js'
+    },
+    app: {
+        src: [
+
+            '<%= config.js %>/app.js',
+            '<%= config.js %>/modules/**/**/*.js'
+        ],
+        dest: '<%= config.dist %>/js/application.js'
+
     }
+
 };
