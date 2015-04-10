@@ -10,7 +10,6 @@ function FinderConfig($stateProvider, $urlRouterProvider, $locationProvider){
     $locationProvider.hashPrefix('!');
     $urlRouterProvider.otherwise('/');
 
-
     $stateProvider
         .state('finder', {
             url: '/',

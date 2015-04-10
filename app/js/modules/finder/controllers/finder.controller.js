@@ -21,6 +21,7 @@ function FinderController(){
     vm.nome = 'Davi';
     vm.removerItem = removerItem;
     vm.textoDigitado = '';
+    vm.country;
 
     function adicionaTexto() {
         vm.indicePintado = -1;
