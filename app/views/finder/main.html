@@ -15,21 +15,34 @@
     <div class="ui divider"></div>
 </header>
 
-<div id="app" class="ui page grid"></div>
+<form ng-submit="vm.search()">
+    <select ng-model="vm.country">
+        <option ng-repeat="country in vm.countries | orderBy:'value'" value="{{country.key}}">{{country.value}}</option>
+    </select>
 
-<h1>Bem vindo, {{vm.nome}}</h1>
+    <select ng-model="vm.entity">
+        <option ng-repeat="entity in vm.entities | orderBy:'label'" value="{{entity.id}}"> {{entity.label}} </option>
+    </select>
 
-<form>
-    <label for="texto">Texto</label>
-    <input id="texto" type="text" name="texto" ng-model="vm.textoDigitado">
-    <button ng-click="vm.adicionaTexto()">Adicionar</button>
-    <button ng-click="vm.limparLogs()">Limpar</button>
+    <input type="text" ng-model="vm.term">
+    <button>Buscar</button>
 </form>
 
-<ul>
-    <li ng-repeat="texto in vm.logs track by $index"><a ng-click="vm.removerItem($index)"> &times; </a>
-                    <span ng-class="{duplicatedText : vm.indicePintado === $index}">
-                        {{texto}}
-                    </span>
-    </li>
-</ul>
+<table>
+    <tbody ng-if="vm.artworks.length > 0">
+        <tr ng-repeat="artwork in vm.artworks">
+            <td>
+                <img ng-src="{{artwork.artworkUrl60}}"/>
+            </td>
+            <td>
+                {{artwork.trackName}}
+            </td>
+            <td>
+                {{artwork.shortDescription}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="app" class="ui page grid">
+</div>
